@@ -12,11 +12,6 @@
 </header>
 
 <style>
-	header {
-		position: relative;
-		z-index: 1;
-		mix-blend-mode: luminosity;
-	}
 	hgroup {
 		inline-size: fit-content;
 		margin-inline: auto;
