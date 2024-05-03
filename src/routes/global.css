@@ -39,3 +39,17 @@ h6 {
 #awal-dda {
 	isolation: isolate;
 }
+
+/* type utility */
+
+.chel-dd {
+	font-family: 'chelthenham-display-demi', georgia, 'times new roman', times, serif;
+}
+
+.chel-bold {
+	font-family: 'chelthenham-bold', georgia, 'times new roman', times, serif;
+}
+
+.chel-light {
+	font-family: 'chelthenham-light', georgia, 'times new roman', times, serif;
+}
