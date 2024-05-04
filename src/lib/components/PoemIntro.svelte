@@ -57,7 +57,7 @@
 		flex-direction: column;
 
 		position: sticky;
-		top: 50%;
+		top: 50vh;
 		transform: translateY(-50%);
 
 		inline-size: fit-content;
