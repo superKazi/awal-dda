@@ -29,7 +29,7 @@
 	});
 </script>
 
-<div bind:this={loremRef} />
+<div role="presentation" bind:this={loremRef} />
 
 <style>
 	div {

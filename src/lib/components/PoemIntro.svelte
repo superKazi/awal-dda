@@ -3,7 +3,7 @@
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-	let container;
+	let containerRef;
 	gsap.registerPlugin(ScrollTrigger);
 
 	onMount(() => {
@@ -15,7 +15,7 @@
 
 			const tl = gsap.timeline({
 				scrollTrigger: {
-					trigger: container,
+					trigger: containerRef,
 					start: 'top top',
 					end: () => `bottom bottom-=${window.innerHeight / 2}px`,
 					scrub: 2
@@ -27,13 +27,13 @@
 				{ opacity: 0, yPercent: -250 },
 				'<66%'
 			);
-		}, container);
+		}, containerRef);
 
 		return () => ctx.revert();
 	});
 </script>
 
-<div bind:this={container}>
+<div bind:this={containerRef}>
 	<p class="chel-light">
 		<span>
 			The trembling air, time<br />
@@ -66,5 +66,10 @@
 		font-size: var(--step-2);
 		line-height: 1.2;
 		color: #fff;
+	}
+	@media (min-width: 60rem) {
+		div {
+			inline-size: 50vw;
+		}
 	}
 </style>

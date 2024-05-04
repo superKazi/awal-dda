@@ -16,9 +16,3 @@
 	<Header />
 	<Lorem />
 </main>
-
-<style>
-	main {
-		background: #1f1f1f;
-	}
-</style>

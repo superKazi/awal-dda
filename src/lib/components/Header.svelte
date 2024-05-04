@@ -2,8 +2,10 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
-	import { mainImgStore } from '$lib/stores';
+	import { mainImgStore, secondaryImgStore } from '$lib/stores';
+	import flowers from '$lib/images/flowers.jpeg';
 	import bouquet from '$lib/images/bouquet.jpeg';
+	import blueWindow from '$lib/images/window.jpeg';
 
 	let headerRef;
 	gsap.registerPlugin(ScrollTrigger);
@@ -12,8 +14,24 @@
 		const ctx = gsap.context(() => {
 			ScrollTrigger.create({
 				trigger: headerRef,
-				start: 'top top',
+				start: 'top bottom-=25%',
 				end: 'bottom center',
+				onEnter: () => {
+					if (window.matchMedia('(min-width: 60rem)').matches) {
+						$secondaryImgStore = {
+							src: blueWindow,
+							alt: 'A corner of an empty apartment with white walls, wooden floors, and dramatic blue lighting spilling in from a large window. A golden light is cast onto the window itself. The view through the window is the face of an apartment building.'
+						};
+					}
+				},
+				onLeaveBack: () => {
+					if (window.matchMedia('(min-width: 60rem)').matches) {
+						$secondaryImgStore = {
+							src: flowers,
+							alt: 'A garden in peak bloom seen from above featuring various plants and flowers of reddish and pinkish shades.'
+						};
+					}
+				},
 				onEnterBack: () => {
 					$mainImgStore = {
 						src: bouquet,
@@ -43,11 +61,13 @@
 	header {
 		position: relative;
 		z-index: 1;
-		mix-blend-mode: exclusion;
+		mix-blend-mode: luminosity;
 	}
 	hgroup {
 		inline-size: fit-content;
 		margin-inline: auto;
+
+		overflow: clip;
 	}
 	.kicker,
 	h1 {
@@ -70,5 +90,10 @@
 		font-size: var(--step-2);
 		line-height: 1.2;
 		color: #eaeaea;
+	}
+	@media (min-width: 60rem) {
+		header {
+			inline-size: 50vw;
+		}
 	}
 </style>
