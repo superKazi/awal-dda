@@ -17,7 +17,7 @@
 				start: 'top bottom-=25%',
 				end: 'bottom center',
 				onEnter: () => {
-					if (window.matchMedia('(min-width: 64rem)').matches) {
+					if (window.matchMedia('(min-width: 60rem)').matches) {
 						$secondaryImgStore = {
 							src: blueWindow,
 							alt: 'A corner of an empty apartment with white walls, wooden floors, and dramatic blue lighting spilling in from a large window. A golden light is cast onto the window itself. The view through the window is the face of an apartment building.'
@@ -25,7 +25,7 @@
 					}
 				},
 				onLeaveBack: () => {
-					if (window.matchMedia('(min-width: 64rem)').matches) {
+					if (window.matchMedia('(min-width: 60rem)').matches) {
 						$secondaryImgStore = {
 							src: flowers,
 							alt: 'A garden in peak bloom seen from above featuring various plants and flowers of reddish and pinkish shades.'
@@ -91,7 +91,7 @@
 		line-height: 1.2;
 		color: #eaeaea;
 	}
-	@media (min-width: 64rem) {
+	@media (min-width: 60rem) {
 		header {
 			inline-size: 50vw;
 		}

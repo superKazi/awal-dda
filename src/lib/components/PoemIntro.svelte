@@ -67,7 +67,7 @@
 		line-height: 1.2;
 		color: #fff;
 	}
-	@media (min-width: 64rem) {
+	@media (min-width: 60rem) {
 		div {
 			inline-size: 50vw;
 		}

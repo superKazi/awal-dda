@@ -8,7 +8,7 @@
 	let desktopViewport = false;
 
 	onMount(() => {
-		const desktopMatchMedia = window.matchMedia('(min-width: 64rem)');
+		const desktopMatchMedia = window.matchMedia('(min-width: 60rem)');
 		desktopViewport = desktopMatchMedia.matches;
 
 		desktopMatchMedia.addEventListener('change', matchMediaCb);
@@ -63,7 +63,7 @@
 		inline-size: 100%;
 		block-size: 100%;
 	}
-	@media (min-width: 64rem) {
+	@media (min-width: 60rem) {
 		.main-img-container {
 			inline-size: 50%;
 		}
