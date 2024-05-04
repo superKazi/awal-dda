@@ -3,30 +3,30 @@
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-	// @ts-ignore
 	let container;
 	gsap.registerPlugin(ScrollTrigger);
 
 	onMount(() => {
 		const ctx = gsap.context(() => {
+			ScrollTrigger.config({
+				limitCallbacks: true,
+				ignoreMobileResize: true
+			});
+
 			const tl = gsap.timeline({
 				scrollTrigger: {
-					// @ts-ignore
 					trigger: container,
-					pin: true,
 					start: 'top top',
-					end: () => `+=${window.innerHeight * 2.75}px`,
-					scrub: 1,
-					onScrubComplete: ({ progress }) => {
-						if (progress === 1) {
-							gsap.to('span:last-of-type', { opacity: 0, duration: 0.4, ease: 'linear' });
-						}
-					}
+					end: () => `bottom bottom-=${window.innerHeight / 2}px`,
+					scrub: 2
 				}
 			});
 
-			tl.to('span:first-of-type', { opacity: 0 }).to('span:last-of-type', { opacity: 0.1 }, '<66%');
-			// @ts-ignore
+			tl.to('span:first-of-type', { opacity: 0 }).to(
+				'span:last-of-type',
+				{ opacity: 0, yPercent: -250 },
+				'<66%'
+			);
 		}, container);
 
 		return () => ctx.revert();
@@ -47,14 +47,19 @@
 
 <style>
 	div {
-		inline-size: 100%;
-		block-size: 100vh;
-
-		display: grid;
-		place-content: center;
+		position: relative;
+		z-index: 1;
+		inline-size: 100vw;
+		block-size: 300vh;
 	}
-
 	p {
+		display: flex;
+		flex-direction: column;
+
+		position: sticky;
+		top: 50%;
+		transform: translateY(-50%);
+
 		inline-size: fit-content;
 		margin-inline: auto;
 
