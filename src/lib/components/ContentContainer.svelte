@@ -23,7 +23,7 @@
 	}
 	.image-container {
 		position: sticky;
-		z-index: 0;
+		z-index: -1;
 		top: 0;
 		left: 0;
 		inline-size: 100%;
@@ -37,7 +37,7 @@
 	.text-container,
 	.luminosity-container {
 		position: relative;
-		z-index: 5;
+		z-index: 1;
 	}
 	.text-container {
 		margin-block-start: -100vh;

@@ -1,15 +1,13 @@
-<header>
-	<hgroup>
-		<p class="chel-bold kicker">opinion</p>
-		<h1 class="chel-dd">
-			To<br />fall<br />in love<br />with<br />the<br />world
-		</h1>
-		<p class="chel-light dek">
-			A late summer meditation<br />on time, loss, and solace in<br />the natural world, made from<br
-			/>the work of the photographer<br />Mary Manning and the<br />poet Brian Turner.
-		</p>
-	</hgroup>
-</header>
+<hgroup>
+	<p class="chel-bold kicker">opinion</p>
+	<h1 class="chel-dd">
+		To<br />fall<br />in love<br />with<br />the<br />world
+	</h1>
+	<p class="chel-light dek">
+		A late summer meditation<br />on time, loss, and solace in<br />the natural world, made from<br
+		/>the work of the photographer<br />Mary Manning and the<br />poet Brian Turner.
+	</p>
+</hgroup>
 
 <style>
 	hgroup {
