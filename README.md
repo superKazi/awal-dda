@@ -1,6 +1,6 @@
 # SvelteKit Demo app
 
-# Deviations
+## Deviations
 
 - Fluid type scale compromises "pixel perfect" font-sizes at hard screen sizes from figma for consistent typographic hierarchy across all viewports.
 - Logical properites compromises "pixel perfect" absolute positioning and sizing for consistent positioning and sizing across all viewports and writing-modes.
