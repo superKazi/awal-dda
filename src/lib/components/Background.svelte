@@ -1,7 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
 	import { blur } from 'svelte/transition';
-	import _throttle from 'lodash.throttle';
 	import { mainImgStore, secondaryImgStore } from '$lib/stores';
 	import BackgroundImage from './BackgroundImage.svelte';
 
