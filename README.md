@@ -1,6 +1,6 @@
 # NYT Opinion Digital Dev Assignment
 
-- [completed code assignment](awal-dda.vercel.app)
+- [completed code assignment](https://awal-dda.vercel.app)
 - [completed design assignment](https://www.figma.com/design/BA2M9X8F2Yh6NEfbxGfhtM/awal-dda?node-id=0-1&t=WLjuGmsxDjZbH89I-1)
 
 ## Deviations
